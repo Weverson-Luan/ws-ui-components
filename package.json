@@ -1,0 +1,23 @@
+{
+  "name": "ws-ui-components",
+  "version": "1.0.7",
+  "description": "componente para ser utilizado em suas aplicações RN",
+  "main": "index.ts",
+  "author": "Weverson Luan De Sousa",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "@types/react-native": "*",
+    "typescript": "*"
+  },
+  "devDependencies": {
+    "@types/react-native": "*",
+    "typescript": "*"
+  }
+}
