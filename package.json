@@ -1,6 +1,6 @@
 {
   "name": "ws-ui-components",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "componente para ser utilizado em suas aplicações RN",
   "main": "index.ts",
   "author": "Weverson Luan De Sousa",

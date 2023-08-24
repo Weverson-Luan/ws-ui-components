@@ -54,26 +54,27 @@ $ yarn install
 ## Utilizando Componentes 🎇
 
 ```
+  
   <TextNative 
       text="Hello Friend"
-      /> API de componentes
+    />
 
-   <InputWs 
-        height={50}
-        textLabel='Nome'
-        textAlign='left'
-        colorTextLabel="#6c757d"
-        fontSize={18}
-        fontWeight='500'
-        placeholder='Informe seu nome'
-        borderWidth={1}
-        borderColor='#cdcdcd'
-        borderRadius={4}
-        paddingLeft={16}
-        marginTop={4}
-        placeholderTextColor={"#cdcdcd"}
-        iconJsxRightPhosphor={<User size={24} color="black"/> }
-      />
+  <InputWs 
+      height={50}
+      textLabel='Nome'
+      textAlign='left'
+      colorTextLabel="#6c757d"
+      fontSize={18}
+      fontWeight='500'
+      placeholder='Informe seu nome'
+      borderWidth={1}
+      borderColor='#cdcdcd'
+      borderRadius={4}
+      paddingLeft={16}
+      marginTop={4}
+      placeholderTextColor={"#cdcdcd"}
+      rightIconJsx={<User size={24} color="#6c757d"/> }
+    />
 ```
 
 &nbsp;
