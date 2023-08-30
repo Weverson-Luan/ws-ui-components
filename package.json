@@ -2,7 +2,7 @@
   "name": "ws-ui-components",
   "version": "1.1.1",
   "description": "componente para ser utilizado em suas aplicações RN",
-  "main": "dist/cjs/index.js",
+  "main": "index.ts",
   "module": "dist/esm/index.js",
   "types": "dist/ts/index.d.ts",
   "author": "Weverson Luan De Sousa",
@@ -38,6 +38,8 @@
     "@tsconfig/react-native": "^3.0.2",
     "react": "*",
     "react-native": "*",
+    "react-native-svg": "^13.13.0",
+    "react-native-svg-transformer": "^1.1.0",
     "storybook": "^7.0.0"
   },
   "peerDependencies": {
@@ -93,7 +95,6 @@
     "react-native-reanimated": "2.14.4",
     "react-native-safe-area-context": "^4.4.1",
     "react-native-screens": "^3.18.2",
-    "react-native-svg": "^13.4.0",
     "react-native-vector-icons": "^9.2.0",
     "react-native-web": "^0.18.9",
     "react-test-renderer": "18.1.0",

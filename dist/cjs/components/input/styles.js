@@ -15,6 +15,7 @@ const styles = props => _reactNative.StyleSheet.create({
     textAlign: props.textAlign,
     fontWeight: props.fontWeight,
     color: props.colorTextLabel,
+    marginBottom: 8,
     lineHeight: 24,
     letterSpacing: 0.5
   },
@@ -29,14 +30,15 @@ const styles = props => _reactNative.StyleSheet.create({
     marginBottom: (props === null || props === void 0 ? void 0 : props.marginBottom) ?? 0,
     padding: (props === null || props === void 0 ? void 0 : props.padding) ?? 0,
     paddingLeft: (props === null || props === void 0 ? void 0 : props.paddingLeft) ?? 0,
-    paddingRight: (props === null || props === void 0 ? void 0 : props.paddingRight) ?? 0,
+    paddingRight: props !== null && props !== void 0 && props.icon ? 44 : props.paddingRight,
     paddingTop: (props === null || props === void 0 ? void 0 : props.paddingTop) ?? 0,
     paddingBottom: (props === null || props === void 0 ? void 0 : props.paddingBottom) ?? 0,
     borderWidth: props.borderWidth ?? 1,
     borderColor: props.borderColor ?? 'black',
     borderRadius: props.borderRadius ?? 4,
-    color: '#6c757d',
-    fontSize: 16
+    color: props.color ?? '#6c757d',
+    fontSize: 16,
+    flexWrap: 'wrap'
   }
 });
 

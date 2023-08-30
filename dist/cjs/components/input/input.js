@@ -26,7 +26,9 @@ const InputWs = ({
   colorTextLabel,
   lineHeight,
   letterSpacing,
+  icon,
   rightIconJsx,
+  onPressVissiblePassword,
   ...res
 }) => {
   const dataPropsStyles = {
@@ -41,29 +43,40 @@ const InputWs = ({
     fontWeight,
     colorTextLabel,
     lineHeight,
-    letterSpacing
+    letterSpacing,
+    icon,
+    ...res
   };
   return /*#__PURE__*/_react.default.createElement(_reactNative.View, {
     style: {
-      position: 'relative'
+      position: "relative",
+      flexDirection: "column",
+      alignItems: "flex-start",
+      backgroundColor: "transparent"
     }
   }, textLabel && /*#__PURE__*/_react.default.createElement(_reactNative.Text, {
     style: (0, _styles.styles)(dataPropsStyles).textLabel
-  }, textLabel, ":"), /*#__PURE__*/_react.default.createElement(_reactNative.TextInput, _extends({
+  }, textLabel, ":"), /*#__PURE__*/_react.default.createElement(_reactNative.View, {
+    style: {
+      position: "relative",
+      flexDirection: "row",
+      alignItems: "flex-end"
+    }
+  }, /*#__PURE__*/_react.default.createElement(_reactNative.TextInput, _extends({
     style: (0, _styles.styles)(dataPropsStyles).inputWs,
     testID: testID
   }, res)), /*#__PURE__*/_react.default.createElement(_reactNative.TouchableOpacity, {
+    onPress: onPressVissiblePassword,
     style: {
-      position: 'absolute',
+      width: 40,
+      position: "absolute",
       right: 0,
-      top: 28,
-      backgroundColor: 'transparent',
-      height: 49,
-      width: 60,
-      alignItems: 'center',
-      justifyContent: 'center'
+      top: 16,
+      zIndex: 9999,
+      alignItems: "center",
+      justifyContent: "center"
     }
-  }, rightIconJsx));
+  }, rightIconJsx)));
 };
 
 /**
