@@ -1,18 +1,18 @@
 # React Native ws-ui-components 🎯
 
-  Componetes React Native para Android
+Componetes React Native para Android
 
 ## Characteristics 🗳️
 
 🚀 Project imperativo </br>
-📦 Muito leve (~xxx kB)  </br>
-⌨️  Compatível com android  </br>
-🎨 Layouts personalizáveis  </br>
-🔧 Configuração flexível  </br>
+📦 Muito leve (~xxx kB) </br>
+⌨️ Compatível com android </br>
+🎨 Layouts personalizáveis </br>
+🔧 Configuração flexível </br>
 
 ## Documentation 📋
 
-  WS_Ui_Component is an open-source mobile framework for developing interface and front-end components for applications, using ReactNative, TypeScript and JavaScript, improving the user experience in a friendly and responsive app.
+WS_Ui_Component is an open-source mobile framework for developing interface and front-end components for applications, using ReactNative, TypeScript and JavaScript, improving the user experience in a friendly and responsive app.
 
 ## Contributors 👩‍💻
 
@@ -28,13 +28,13 @@ Before you begin, you will need to have the following tools installed on your ma
 
 ## Compatibilities
 
- Compatible with react-native >= 0.64.3
+Compatible with react-native >= 0.64.3
 
 ## Installation 🛠️
 
 ```
  yarn add ws-ui-components
- or 
+ or
  npm i ws-ui-components
 ```
 
@@ -51,15 +51,22 @@ $ yarn install
 
 ```
 
+## Antes da utilização de qualquer compoennte
+
+```
+  Alterar no arquivo package a prop *main* para *index.ts*
+  Se quiser rodar o storybook do projeto altere para *dist/cjs/index.js*
+```
+
 ## Utilizando Componentes 🎇
 
 ```
-  
-  <TextNative 
+
+  <TextNative
       text="Hello Friend"
     />
 
-  <InputWs 
+  <InputWs
       height={50}
       textLabel='Nome'
       textAlign='left'

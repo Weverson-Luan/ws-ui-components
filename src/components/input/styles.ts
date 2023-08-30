@@ -12,6 +12,7 @@ const styles = (props: IInputNativeWs) =>
       textAlign: props.textAlign,
       fontWeight: props.fontWeight,
       color: props.colorTextLabel,
+      marginBottom: 8,
       lineHeight: 24,
       letterSpacing: 0.5,
     },
@@ -26,14 +27,15 @@ const styles = (props: IInputNativeWs) =>
       marginBottom: props?.marginBottom ?? 0,
       padding: props?.padding ?? 0,
       paddingLeft: props?.paddingLeft ?? 0,
-      paddingRight: props?.paddingRight ?? 0,
+      paddingRight: props?.icon ? 44 : props.paddingRight,
       paddingTop: props?.paddingTop ?? 0,
       paddingBottom: props?.paddingBottom ?? 0,
       borderWidth: props.borderWidth ?? 1,
       borderColor: props.borderColor ?? 'black',
       borderRadius: props.borderRadius ?? 4,
-      color: '#6c757d',
+      color: props.color ?? '#6c757d',
       fontSize: 16,
+      flexWrap: 'wrap'
     },
   });
 

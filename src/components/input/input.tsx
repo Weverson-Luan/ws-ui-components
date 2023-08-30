@@ -5,7 +5,7 @@ import React from "react";
 import { TextInput, View, Text, TouchableOpacity } from "react-native";
 
 // typings
-import { IInputNativeWs, ITextInputProps } from "./interface";
+import { IInputNativeWs } from "./interface";
 
 // styles
 import { styles } from "./styles";
@@ -24,7 +24,9 @@ const InputWs = ({
   colorTextLabel,
   lineHeight,
   letterSpacing,
+  icon,
   rightIconJsx,
+  onPressVissiblePassword,
   ...res
 }: IInputNativeWs) => {
   const dataPropsStyles = {
@@ -40,23 +42,50 @@ const InputWs = ({
     colorTextLabel,
     lineHeight,
     letterSpacing,
+    icon,
+    ...res,
   } as IInputNativeWs;
 
-
   return (
-    <View 
-    style={{position: 'relative'}}
+    <View
+      style={{
+        position: "relative",
+        flexDirection: "column",
+        alignItems: "flex-start",
+        backgroundColor: "transparent",
+      }}
     >
-      {textLabel && <Text style={styles(dataPropsStyles).textLabel}>{textLabel}:</Text>}
-      <TextInput
-        style={styles(dataPropsStyles).inputWs}
-        testID={testID}
-        {...res}
-      />
-      
-     <TouchableOpacity style={{position: 'absolute', right: 0, top: 28, backgroundColor: 'transparent', height: 49, width: 60, alignItems: 'center', justifyContent: 'center'}}>
-       {rightIconJsx}
-     </TouchableOpacity>
+      {textLabel && (
+        <Text style={styles(dataPropsStyles).textLabel}>{textLabel}:</Text>
+      )}
+      <View
+        style={{
+          position: "relative",
+          flexDirection: "row",
+          alignItems: "flex-end",
+        }}
+      >
+        <TextInput
+          style={styles(dataPropsStyles).inputWs}
+          testID={testID}
+          {...res}
+        />
+
+        <TouchableOpacity
+          onPress={onPressVissiblePassword}
+          style={{
+            width: 40,
+            position: "absolute",
+            right: 0,
+            top: 16,
+            zIndex: 9999,
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {rightIconJsx}
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
