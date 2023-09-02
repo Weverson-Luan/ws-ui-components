@@ -5,6 +5,7 @@
 const themeStyleNative = {
   white: '#FFFFFF',
   primary: '#1EA7fD',
+  pimary_150: "#056CF2",
   secondary: '#6C757D',
   sucess: '#28A745',
   danger: '#DC3545',
