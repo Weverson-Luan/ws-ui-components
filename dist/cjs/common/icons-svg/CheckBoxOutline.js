@@ -27,17 +27,13 @@ const SvgIconCheckBoxOutline = ({
   height: size ? size : 24,
   fill: "none"
 }, res), /*#__PURE__*/React.createElement(_reactNativeSvg.Rect, {
-  width: 16,
-  height: 16,
-  y: 0.5,
-  fill: color ? color : "#056CF2",
-  rx: 4
-}), /*#__PURE__*/React.createElement(_reactNativeSvg.Path, {
-  stroke: "#fff",
-  strokeLinecap: "round",
-  strokeLinejoin: "round",
+  width: 14.5,
+  height: 14.5,
+  x: 0.75,
+  y: 1.25,
+  stroke: "#F3F3F3",
   strokeWidth: 1.5,
-  d: "m11.002 6.7-3.6 3.6-1.8-1.8"
+  rx: 3.25
 }));
 
 /**
