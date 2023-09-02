@@ -3,7 +3,7 @@ import { View, StyleSheet } from "react-native";
 import { Meta, StoryObj } from "@storybook/react";
 
 // components
-import { TextNative } from "../../src/components/text/text";
+import { TextNativeWs } from "../../src/components/text/text";
 
 // styles
 import { themeStyleNative } from "../../src/styles/theme/theme";
@@ -19,8 +19,8 @@ const styles = StyleSheet.create({
 });
 
 export default {
-  component: TextNative,
-  title: "Text",
+  component: TextNativeWs,
+  title: "TextWs",
   decorators: [
     (Story) => (
       <View style={styles.container}>
@@ -28,18 +28,18 @@ export default {
       </View>
     ),
   ],
-} as Meta<typeof TextNative>;
+} as Meta<typeof TextNativeWs>;
 
 /**
  * Typings StoryObje
  */
-type Story = StoryObj<typeof TextNative>;
+type Story = StoryObj<typeof TextNativeWs>;
 
 export const TextThin100: Story = {
   name: "Simple - 100",
   args: {
     onPress: () => {},
-    text: "Simple Text",
+    text: "Simple TextWs",
     size: 18,
     color: themeStyleNative.white,
     fontWeight: "100",
@@ -51,7 +51,7 @@ export const TextLight300: Story = {
   name: "Text Light - 300",
   args: {
     onPress: () => {},
-    text: "Simple Text",
+    text: "Simple TextWs",
     size: 18,
     color: themeStyleNative.white,
     fontWeight: "300",

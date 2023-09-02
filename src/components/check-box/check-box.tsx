@@ -2,44 +2,79 @@
  * IMPORTS
  */
 import React from "react";
-import {
-  TouchableOpacity,
-  View,
-  Text,
-  TouchableOpacityProps,
-} from "react-native";
+import { TouchableOpacity, View } from "react-native";
 
 // commons icons-svg
 import { SvgIconCheckBoxFill } from "../../common/icons-svg/CheckBoxFill";
 import { SvgIconCheckBoxOutline } from "../../common/icons-svg/CheckBoxOutline";
 
-interface ICheckBoxWsProps extends TouchableOpacityProps {
-  isChecked: boolean;
-  backgroundColorCheck?: string;
-}
+// components
+import { TextNativeWs } from "../text/text";
+
+// typings
+import { ICheckBoxWsProps } from "./check";
+
+// styles
+import { themeStyleNative } from "../../styles/theme/theme";
+import { styles } from "./styles";
 
 const CheckBoxWs = ({
+  width,
+  height,
   isChecked,
   backgroundColorCheck,
+  textLabel,
+  textSizeLabel,
+  colorTextLabel,
   onPress,
   ...res
 }: ICheckBoxWsProps) => {
+  const dataStylesProps = {
+    width,
+    height,
+  } as ICheckBoxWsProps;
   return (
     <TouchableOpacity
       onPress={onPress}
       {...res}
-      style={{
-        width: 30,
-        height: 30,
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
+      style={styles(dataStylesProps).mainCheckbox}
     >
       {isChecked ? (
-        <SvgIconCheckBoxFill size={24} color={backgroundColorCheck} />
+        <View style={styles(dataStylesProps).mainCheckbox}>
+          <SvgIconCheckBoxFill size={24} color={backgroundColorCheck} />
+          {textLabel && (
+            <TextNativeWs
+              text="Label"
+              color={
+                colorTextLabel === "dark"
+                  ? themeStyleNative.text
+                  : themeStyleNative.white
+              }
+              size={textLabel ? textSizeLabel : 16}
+              lineHeight={24}
+              letterSpacing={0.5}
+              marginBottom={8}
+            />
+          )}
+        </View>
       ) : (
-        <SvgIconCheckBoxOutline size={24} color={backgroundColorCheck} />
+        <View style={styles(dataStylesProps).mainCheckbox}>
+          <SvgIconCheckBoxOutline size={24} color={backgroundColorCheck} />
+          {textLabel && (
+            <TextNativeWs
+              text="Label"
+              color={
+                colorTextLabel === "dark"
+                  ? themeStyleNative.text
+                  : themeStyleNative.white
+              }
+              size={textLabel ? textSizeLabel : 16}
+              lineHeight={24}
+              letterSpacing={0.5}
+              marginBottom={8}
+            />
+          )}
+        </View>
       )}
     </TouchableOpacity>
   );
