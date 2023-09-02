@@ -51,14 +51,14 @@ $ yarn install
 
 ```
 
-## Antes da utilização de qualquer compoennte
+## Before running the project on your storybook machine
 
 ```
-  Alterar no arquivo package a prop *main* para *index.ts*
-  Se quiser rodar o storybook do projeto altere para *dist/cjs/index.js*
+  Alterar no arquivo package a prop *main* de *index.ts*
+  altere para *dist/cjs/index.js*
 ```
 
-## Utilizando Componentes 🎇
+## Using Components 🎇
 
 ```
 

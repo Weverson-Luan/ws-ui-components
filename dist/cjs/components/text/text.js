@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.TextNative = void 0;
+exports.TextNativeWs = void 0;
 var _react = _interopRequireDefault(require("react"));
 var _reactNative = require("react-native");
 var _styles = require("./styles");
@@ -18,7 +18,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 // hello
 
-const TextNative = ({
+const TextNativeWs = ({
   text = "Hello Dev",
   color = "#1E1E1E",
   size = 23,
@@ -63,4 +63,4 @@ const TextNative = ({
 /**
  * EXPORT
  */
-exports.TextNative = TextNative;
+exports.TextNativeWs = TextNativeWs;

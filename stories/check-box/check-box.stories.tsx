@@ -38,6 +38,8 @@ type Story = StoryObj<typeof CheckBoxWs>;
 export const CheckBoxDisable: Story = {
   name: "Check Box - Disable",
   args: {
+    width: 30,
+    height: 30,
     onPress: () => {},
     isChecked: false,
     backgroundColorCheck: themeStyleNative.pimary_150,
@@ -47,8 +49,38 @@ export const CheckBoxDisable: Story = {
 export const CheckBoxAble: Story = {
   name: "Check Box - Able",
   args: {
+    width: 30,
+    height: 30,
     onPress: () => {},
     isChecked: true,
     backgroundColorCheck: themeStyleNative.primary,
+  },
+};
+
+export const CheckBoxDisableWithLabel: Story = {
+  name: "Check Box - Disable with label",
+  args: {
+    width: 80,
+    height: 40,
+    textLabel: "Label",
+    textSizeLabel: 17,
+    colorTextLabel: "light",
+    onPress: () => {},
+    isChecked: false,
+    backgroundColorCheck: themeStyleNative.pimary_150,
+  },
+};
+
+export const CheckBoxAbleWithLabel: Story = {
+  name: "Check Box - Able with label",
+  args: {
+    width: 80,
+    height: 40,
+    textLabel: "Label Checked",
+    textSizeLabel: 17,
+    colorTextLabel: "light",
+    onPress: () => {},
+    isChecked: true,
+    backgroundColorCheck: themeStyleNative.pimary_150,
   },
 };
