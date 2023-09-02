@@ -40,7 +40,7 @@ export const CheckBoxDisable: Story = {
   args: {
     onPress: () => {},
     isChecked: false,
-    backgroundColorCheck: themeStyleNative.secondary,
+    backgroundColorCheck: themeStyleNative.pimary_150,
   },
 };
 
