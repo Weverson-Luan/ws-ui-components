@@ -62,9 +62,13 @@ $ yarn install
 
 ```
 
-  <TextNative
-      text="Hello Friend"
-    />
+  <TextNativeWs
+    text="Simple Text"
+    align="center"
+    size={18}
+    color="#FFFFFF"
+    fontWeight="100"
+  />
 
   <InputWs
       height={50}
@@ -81,6 +85,12 @@ $ yarn install
       marginTop={4}
       placeholderTextColor={"#cdcdcd"}
       rightIconJsx={<User size={24} color="#6c757d"/> }
+      onPressVissiblePassword={() => {}}
+    />
+
+    <CheckBoxWs
+      isChecked={true}
+      backgroundColorCheck="#056CF2"
     />
 ```
 

@@ -12,7 +12,7 @@ import { styles } from "./styles";
 
 // hello
 
-const TextNative = ({
+const TextNativeWs = ({
   text = "Hello Dev",
   color = "#1E1E1E",
   size = 23,
@@ -59,4 +59,4 @@ const TextNative = ({
 /**
  * EXPORT
  */
-export { TextNative };
+export { TextNativeWs };
