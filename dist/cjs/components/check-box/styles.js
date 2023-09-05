@@ -9,8 +9,16 @@ var _reactNative = require("react-native");
  * IMPORTS
  */
 
+// typings
+
 const styles = props => _reactNative.StyleSheet.create({
-  mainCheckbox: {}
+  mainCheckbox: {
+    width: props.width ? props.width : 30,
+    height: props.height ? props.height : 30,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center"
+  }
 });
 /**
  * EXPORTS

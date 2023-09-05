@@ -1,6 +1,6 @@
 {
   "name": "ws-ui-components",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "componente para ser utilizado em suas aplicações RN",
   "main": "index.ts",
   "module": "dist/esm/index.js",
@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@tsconfig/react-native": "^3.0.2",
+    "card-validator": "^8.1.1",
     "react": "*",
     "react-native": "*",
     "react-native-svg": "^13.13.0",

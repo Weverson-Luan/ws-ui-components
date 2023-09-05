@@ -10,6 +10,7 @@ exports.themeStyleNative = void 0;
 
 const themeStyleNative = {
   white: '#FFFFFF',
+  text: "#1E1E1E",
   primary: '#1EA7fD',
   pimary_150: "#056CF2",
   secondary: '#6C757D',
