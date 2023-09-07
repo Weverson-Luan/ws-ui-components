@@ -6,19 +6,25 @@ Object.defineProperty(exports, "__esModule", {
 exports.CreditCardWs = void 0;
 var _react = _interopRequireDefault(require("react"));
 var _reactNative = require("react-native");
-var _styles = require("./styles");
 var _text = require("../text/text");
-var _theme = require("../../styles/theme/theme");
 var _IconMastercard = require("../../common/icons-svg/IconMastercard");
 var _IconVisa = require("../../common/icons-svg/IconVisa");
 var _IconAmericanExpress = require("../../common/icons-svg/IconAmericanExpress");
 var _handleFormattedCreditCard = require("../../utils/handle-formatted-credit-card");
+var _theme = require("../../styles/theme/theme");
+var _styles = require("./styles");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 /**
  * IMPORTS
  */
 
 var validCardType = require("card-validator");
+
+// components
+
+// commons
+
+// typings
 
 // styles
 
@@ -71,21 +77,21 @@ const CreditCardWs = ({
   }, /*#__PURE__*/_react.default.createElement(_reactNative.View, {
     style: _styles.styles.content
   }, icon && /*#__PURE__*/_react.default.createElement(_reactNative.View, {
-    style: {
-      width: "100%",
-      alignItems: "flex-end",
-      paddingRight: 12
-    }
-  }, handleVerificationBinCardCredit((_numberValidation = numberValidation) === null || _numberValidation === void 0 || (_numberValidation = _numberValidation.card) === null || _numberValidation === void 0 ? void 0 : _numberValidation.type)), back ? /*#__PURE__*/_react.default.createElement(_reactNative.View, {
+    style: _styles.styles.icon
+  }, handleVerificationBinCardCredit((_numberValidation = numberValidation) === null || _numberValidation === void 0 || (_numberValidation = _numberValidation.card) === null || _numberValidation === void 0 ? void 0 : _numberValidation.type)), back ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactNative.View, {
     style: _styles.styles.strip
+  }), /*#__PURE__*/_react.default.createElement(_reactNative.View, {
+    style: _styles.styles.rowVersion
+  }, /*#__PURE__*/_react.default.createElement(_reactNative.View, {
+    style: _styles.styles.rowVersionChildren
   }, /*#__PURE__*/_react.default.createElement(_text.TextNativeWs, {
     text: data === null || data === void 0 ? void 0 : data.cvv,
-    color: _theme.themeStyleNative.white,
+    color: _theme.themeStyleNative.text,
     size: 16,
     fontWeight: "500",
     lineHeight: 24,
     letterSpacing: 0.5
-  })) : /*#__PURE__*/_react.default.createElement(_reactNative.View, {
+  })))) : /*#__PURE__*/_react.default.createElement(_reactNative.View, {
     style: _styles.styles.datainformation
   }, /*#__PURE__*/_react.default.createElement(_reactNative.View, {
     style: {
@@ -109,14 +115,7 @@ const CreditCardWs = ({
     lineHeight: 24,
     letterSpacing: 0.5
   })), /*#__PURE__*/_react.default.createElement(_reactNative.View, {
-    style: {
-      width: "100%",
-      height: 40,
-      flexDirection: "row",
-      alignItems: "flex-end",
-      justifyContent: "flex-end",
-      backgroundColor: "transparent"
-    }
+    style: _styles.styles.validate
   }, /*#__PURE__*/_react.default.createElement(_text.TextNativeWs, {
     text: data.validate ? data.validate : "03/2023",
     color: _theme.themeStyleNative.white,

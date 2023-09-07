@@ -88,6 +88,34 @@ export const CreditCardWsMastercardBack: Story = {
   },
 };
 
+export const CreditCardWsHipercard: Story = {
+  name: "Cartão Hipercard",
+  args: {
+    back: false,
+    icon: true,
+    data: {
+      number: "6062 8231 8079 5194",
+      name: "Weverson Luan De Sousa",
+      validate: "05/2024",
+      cvv: "658",
+    },
+  },
+};
+
+export const CreditCardWsHipercardBack: Story = {
+  name: "Cartão Hipercard Verso",
+  args: {
+    back: true,
+    icon: true,
+    data: {
+      number: "6062 8231 8079 5194",
+      name: "Weverson Luan De Sousa",
+      validate: "05/2024",
+      cvv: "658",
+    },
+  },
+};
+
 export const CreditCardWsAmericanExpress: Story = {
   name: "Cartão American Express",
   args: {

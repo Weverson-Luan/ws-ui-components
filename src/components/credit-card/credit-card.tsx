@@ -3,7 +3,7 @@
  */
 
 import React from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 var validCardType = require("card-validator");
 
 // components
@@ -21,6 +21,9 @@ import { ICreditCardProps } from "./interface";
 // styles
 import { themeStyleNative } from "../../styles/theme/theme";
 import { styles } from "./styles";
+import { SvgIconChipCard } from "../../common/icons-svg/IconChipCard";
+import { SvgIconHipercad } from "../../common/icons-svg/IconHipercad";
+import { SvgIconMaestrocard } from "../../common/icons-svg/IconMaestrocard";
 
 /**
  * Component de cartão de credito para a interação da ui.
@@ -41,36 +44,73 @@ const CreditCardWs = ({ data, icon, back }: ICreditCardProps) => {
   /**
    * Recebe um numero de cartão de credito e retonar a bandeira
    */
-  const handleVerificationBinCardCredit = (paraString: string) => {
+  const handleVerificationBinCardCredit = (paraString?: string) => {
     switch (paraString) {
       /**
        * Bandeira Visa: começam com o número 4;
        */
       case "visa":
         return <SvgIconVisa />;
+
       /**
        * Bandeira Mastercard: começam com um número entre 51 e 55;
        */
       case "mastercard":
         return <SvgIconMastercard />;
+
+      /**
+       * Bandeira Mastercard: começam com um número entre 51 e 55;
+       */
+      case "maestro":
+        return <SvgIconMaestrocard />;
+
+      /**
+       * Bandeira Mastercard: começam com um número entre 38 e 60;
+       */
+      case "hipercard":
+        return <SvgIconHipercad />;
+
       /**
        * Bandeira American Express: começam com 34 ou 37;
        */
       case "american-express":
         return <SvgIconAmericanExpress />;
+
       default:
-        <SvgIconAmericanExpress />;
+        <SvgIconVisa />;
+        return;
     }
   };
 
   return (
     <View style={styles.container}>
       <View style={styles.content}>
-        {icon && (
-          <View style={styles.icon}>
-            {handleVerificationBinCardCredit(numberValidation?.card?.type)}
+        <View
+          style={{
+            width: "100%",
+            alignItems: "center",
+            justifyContent: "space-between",
+            flexDirection: "row",
+            paddingLeft: 16,
+            paddingRight: 16,
+          }}
+        >
+          {back ? <></> : <SvgIconChipCard />}
+
+          <View
+            style={{
+              width: 70,
+              height: 56,
+              alignItems: "center",
+            }}
+          >
+            {data.number.length === 0 ? (
+              <Text />
+            ) : (
+              handleVerificationBinCardCredit(numberValidation?.card?.type)
+            )}
           </View>
-        )}
+        </View>
 
         {back ? (
           <>
@@ -90,40 +130,61 @@ const CreditCardWs = ({ data, icon, back }: ICreditCardProps) => {
             </View>
           </>
         ) : (
-          <View style={styles.datainformation}>
-            <View style={{ paddingLeft: 12, width: "100%", paddingRight: 16 }}>
+          <>
+            <View style={styles.datainformation}>
               <TextNativeWs
                 text={data.number ? response : "**** **** **** ****"}
                 color={themeStyleNative.white}
-                size={18}
+                size={16}
                 fontWeight="500"
                 lineHeight={24}
                 letterSpacing={0.5}
-                marginBottom={8}
               />
-              <View>
+            </View>
+
+            <View style={styles.footer}>
+              <View style={styles.cardHolder}>
                 <TextNativeWs
-                  text={data.name ? data.name.toUpperCase() : "NOME COMPLETO"}
+                  text={"Card Holder"}
                   color={themeStyleNative.white}
-                  size={18}
+                  size={14}
+                  fontWeight="300"
+                  lineHeight={24}
+                  letterSpacing={0.5}
+                />
+                <TextNativeWs
+                  text={data.name}
+                  color={themeStyleNative.white}
+                  size={16}
                   fontWeight="500"
                   lineHeight={24}
                   letterSpacing={0.5}
                 />
               </View>
 
-              <View style={styles.validate}>
+              <View style={styles.cardHolderExpiress}>
                 <TextNativeWs
-                  text={data.validate ? data.validate : "03/2023"}
+                  text={"Validity"}
                   color={themeStyleNative.white}
-                  size={18}
+                  size={14}
+                  fontWeight="300"
+                  lineHeight={24}
+                  letterSpacing={0.5}
+                />
+
+                <TextNativeWs
+                  text={data.validate}
+                  color={themeStyleNative.white}
+                  size={16}
                   fontWeight="500"
                   lineHeight={24}
                   letterSpacing={0.5}
                 />
               </View>
             </View>
-          </View>
+
+            <View></View>
+          </>
         )}
       </View>
     </View>
