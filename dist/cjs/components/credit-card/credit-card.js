@@ -13,6 +13,9 @@ var _IconAmericanExpress = require("../../common/icons-svg/IconAmericanExpress")
 var _handleFormattedCreditCard = require("../../utils/handle-formatted-credit-card");
 var _theme = require("../../styles/theme/theme");
 var _styles = require("./styles");
+var _IconChipCard = require("../../common/icons-svg/IconChipCard");
+var _IconHipercad = require("../../common/icons-svg/IconHipercad");
+var _IconMaestrocard = require("../../common/icons-svg/IconMaestrocard");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 /**
  * IMPORTS
@@ -58,27 +61,55 @@ const CreditCardWs = ({
        */
       case "visa":
         return /*#__PURE__*/_react.default.createElement(_IconVisa.SvgIconVisa, null);
+
       /**
        * Bandeira Mastercard: começam com um número entre 51 e 55;
        */
       case "mastercard":
         return /*#__PURE__*/_react.default.createElement(_IconMastercard.SvgIconMastercard, null);
+
+      /**
+       * Bandeira Mastercard: começam com um número entre 51 e 55;
+       */
+      case "maestro":
+        return /*#__PURE__*/_react.default.createElement(_IconMaestrocard.SvgIconMaestrocard, null);
+
+      /**
+       * Bandeira Mastercard: começam com um número entre 38 e 60;
+       */
+      case "hipercard":
+        return /*#__PURE__*/_react.default.createElement(_IconHipercad.SvgIconHipercad, null);
+
       /**
        * Bandeira American Express: começam com 34 ou 37;
        */
       case "american-express":
         return /*#__PURE__*/_react.default.createElement(_IconAmericanExpress.SvgIconAmericanExpress, null);
       default:
-        /*#__PURE__*/_react.default.createElement(_IconAmericanExpress.SvgIconAmericanExpress, null);
+        /*#__PURE__*/_react.default.createElement(_IconVisa.SvgIconVisa, null);
+        return;
     }
   };
   return /*#__PURE__*/_react.default.createElement(_reactNative.View, {
     style: _styles.styles.container
   }, /*#__PURE__*/_react.default.createElement(_reactNative.View, {
     style: _styles.styles.content
-  }, icon && /*#__PURE__*/_react.default.createElement(_reactNative.View, {
-    style: _styles.styles.icon
-  }, handleVerificationBinCardCredit((_numberValidation = numberValidation) === null || _numberValidation === void 0 || (_numberValidation = _numberValidation.card) === null || _numberValidation === void 0 ? void 0 : _numberValidation.type)), back ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactNative.View, {
+  }, /*#__PURE__*/_react.default.createElement(_reactNative.View, {
+    style: {
+      width: "100%",
+      alignItems: "center",
+      justifyContent: "space-between",
+      flexDirection: "row",
+      paddingLeft: 16,
+      paddingRight: 16
+    }
+  }, back ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null) : /*#__PURE__*/_react.default.createElement(_IconChipCard.SvgIconChipCard, null), /*#__PURE__*/_react.default.createElement(_reactNative.View, {
+    style: {
+      width: 70,
+      height: 56,
+      alignItems: "center"
+    }
+  }, data.number.length === 0 ? /*#__PURE__*/_react.default.createElement(_reactNative.Text, null) : handleVerificationBinCardCredit((_numberValidation = numberValidation) === null || _numberValidation === void 0 || (_numberValidation = _numberValidation.card) === null || _numberValidation === void 0 ? void 0 : _numberValidation.type))), back ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactNative.View, {
     style: _styles.styles.strip
   }), /*#__PURE__*/_react.default.createElement(_reactNative.View, {
     style: _styles.styles.rowVersion
@@ -91,39 +122,50 @@ const CreditCardWs = ({
     fontWeight: "500",
     lineHeight: 24,
     letterSpacing: 0.5
-  })))) : /*#__PURE__*/_react.default.createElement(_reactNative.View, {
+  })))) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactNative.View, {
     style: _styles.styles.datainformation
-  }, /*#__PURE__*/_react.default.createElement(_reactNative.View, {
-    style: {
-      paddingLeft: 12,
-      width: "100%",
-      paddingRight: 16
-    }
   }, /*#__PURE__*/_react.default.createElement(_text.TextNativeWs, {
     text: data.number ? response : "**** **** **** ****",
     color: _theme.themeStyleNative.white,
-    size: 18,
-    fontWeight: "500",
-    lineHeight: 24,
-    letterSpacing: 0.5,
-    marginBottom: 8
-  }), /*#__PURE__*/_react.default.createElement(_reactNative.View, null, /*#__PURE__*/_react.default.createElement(_text.TextNativeWs, {
-    text: data.name ? data.name.toUpperCase() : "NOME COMPLETO",
-    color: _theme.themeStyleNative.white,
-    size: 18,
+    size: 16,
     fontWeight: "500",
     lineHeight: 24,
     letterSpacing: 0.5
   })), /*#__PURE__*/_react.default.createElement(_reactNative.View, {
-    style: _styles.styles.validate
+    style: _styles.styles.footer
+  }, /*#__PURE__*/_react.default.createElement(_reactNative.View, {
+    style: _styles.styles.cardHolder
   }, /*#__PURE__*/_react.default.createElement(_text.TextNativeWs, {
-    text: data.validate ? data.validate : "03/2023",
+    text: "Card Holder",
     color: _theme.themeStyleNative.white,
-    size: 18,
+    size: 14,
+    fontWeight: "300",
+    lineHeight: 24,
+    letterSpacing: 0.5
+  }), /*#__PURE__*/_react.default.createElement(_text.TextNativeWs, {
+    text: data.name,
+    color: _theme.themeStyleNative.white,
+    size: 16,
     fontWeight: "500",
     lineHeight: 24,
     letterSpacing: 0.5
-  }))))));
+  })), /*#__PURE__*/_react.default.createElement(_reactNative.View, {
+    style: _styles.styles.cardHolderExpiress
+  }, /*#__PURE__*/_react.default.createElement(_text.TextNativeWs, {
+    text: "Validity",
+    color: _theme.themeStyleNative.white,
+    size: 14,
+    fontWeight: "300",
+    lineHeight: 24,
+    letterSpacing: 0.5
+  }), /*#__PURE__*/_react.default.createElement(_text.TextNativeWs, {
+    text: data.validate,
+    color: _theme.themeStyleNative.white,
+    size: 16,
+    fontWeight: "500",
+    lineHeight: 24,
+    letterSpacing: 0.5
+  }))), /*#__PURE__*/_react.default.createElement(_reactNative.View, null))));
 };
 
 /**

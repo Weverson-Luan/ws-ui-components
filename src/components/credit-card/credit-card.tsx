@@ -28,7 +28,7 @@ import { SvgIconMaestrocard } from "../../common/icons-svg/IconMaestrocard";
 /**
  * Component de cartão de credito para a interação da ui.
  */
-const CreditCardWs = ({ data, icon, back }: ICreditCardProps) => {
+const CreditCardWs = ({ data, back }: ICreditCardProps) => {
   var numberValidation = {} as any;
 
   if (data.number.length >= 4) {

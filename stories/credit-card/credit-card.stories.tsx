@@ -36,7 +36,6 @@ export const CreditCardWsVisa: Story = {
   name: "Cartão Visa",
   args: {
     back: false,
-    icon: true,
     data: {
       cvv: "098",
       name: "Weverson Luan De Sousa",
@@ -50,7 +49,6 @@ export const CreditCardWsVisaBack: Story = {
   name: "Cartão Visa Verso",
   args: {
     back: true,
-    icon: true,
     data: {
       cvv: "567",
       name: "Weverson Luan De Sousa",
@@ -64,7 +62,6 @@ export const CreditCardWsMastercard: Story = {
   name: "Cartão Mastercard",
   args: {
     back: false,
-    icon: true,
     data: {
       cvv: "092",
       name: "Weverson Luan De Sousa",
@@ -78,7 +75,6 @@ export const CreditCardWsMastercardBack: Story = {
   name: "Cartão Mastercard Verso",
   args: {
     back: true,
-    icon: true,
     data: {
       cvv: "092",
       name: "Weverson Luan De Sousa",
@@ -92,7 +88,6 @@ export const CreditCardWsHipercard: Story = {
   name: "Cartão Hipercard",
   args: {
     back: false,
-    icon: true,
     data: {
       number: "6062 8231 8079 5194",
       name: "Weverson Luan De Sousa",
@@ -106,7 +101,6 @@ export const CreditCardWsHipercardBack: Story = {
   name: "Cartão Hipercard Verso",
   args: {
     back: true,
-    icon: true,
     data: {
       number: "6062 8231 8079 5194",
       name: "Weverson Luan De Sousa",
@@ -120,7 +114,6 @@ export const CreditCardWsAmericanExpress: Story = {
   name: "Cartão American Express",
   args: {
     back: false,
-    icon: true,
     data: {
       cvv: "3760",
       name: "Weverson Luan De Sousa",
@@ -134,7 +127,6 @@ export const CreditCardWsAmericanExpressBack: Story = {
   name: "Cartão American Express Verso",
   args: {
     back: true,
-    icon: true,
     data: {
       cvv: "3760",
       name: "Weverson Luan De Sousa",
