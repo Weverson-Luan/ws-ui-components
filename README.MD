@@ -92,6 +92,17 @@ $ yarn install
       isChecked={true}
       backgroundColorCheck="#056CF2"
     />
+
+    <CreditCardWs
+      icon
+      back={false}
+      data={{
+        cvv: '098',
+        name: 'Weverson Luan De Sousa',
+        number: '4455787898754321',
+        validate: '08/2029'
+      }}
+    />
 ```
 
 &nbsp;

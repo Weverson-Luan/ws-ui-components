@@ -10,11 +10,6 @@ interface ICreditCardProps {
    */
   back: boolean;
 
-  /**
-   * Propiedade recebe um elemento Jsx ou uma propiedade Boleana 
-   */
-  icon: ReactElement | boolean;
-
 
   /**
    * Propiedade que recebe os dados do cartão de credito
