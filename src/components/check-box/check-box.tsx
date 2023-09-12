@@ -18,6 +18,9 @@ import { ICheckBoxWsProps } from "./check";
 import { themeStyleNative } from "../../styles/theme/theme";
 import { styles } from "./styles";
 
+/**
+ * Componente CheckBoxWs para a interação da  ui.
+ */
 const CheckBoxWs = ({
   width,
   height,

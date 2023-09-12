@@ -36,7 +36,6 @@ var validCardType = require("card-validator");
  */
 const CreditCardWs = ({
   data,
-  icon,
   back
 }) => {
   var _numberValidation;

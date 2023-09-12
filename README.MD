@@ -71,38 +71,49 @@ $ yarn install
   />
 
   <InputWs
-      height={50}
-      textLabel='Nome'
-      textAlign='left'
-      colorTextLabel="#6c757d"
-      fontSize={18}
-      fontWeight='500'
-      placeholder='Informe seu nome'
-      borderWidth={1}
-      borderColor='#cdcdcd'
-      borderRadius={4}
-      paddingLeft={16}
-      marginTop={4}
-      placeholderTextColor={"#cdcdcd"}
-      rightIconJsx={<User size={24} color="#6c757d"/> }
-      onPressVissiblePassword={() => {}}
-    />
+    name="password"
+    height={50}
+    textLabel="Informe sua senha"
+    textAlign="left"
+    color="#FFFFFF"
+    colorTextLabel="#FFFFFF"
+    fontSize={16}
+    fontWeight="500"
+    right={0}
+    borderColor="#CDCDCD"
+    borderRadius={4}
+    borderWidth={1}
+    heightWrapperIcon={50}
+    icon
+    leftIconJsx={<SvgLockKey color="#FFFFFF" size={24}/>}
+    rightIconPasswordJsx={<SvgIconEye color="#FFFFFF" size={24}/>}
+    placeholder="*********"
+    placeholderTextColor="#6C757D"
+    paddingLeft={64}
+    secureTextEntry={true}
+    visiblityPassword={true}
+  />
 
-    <CheckBoxWs
-      isChecked={true}
-      backgroundColorCheck="#056CF2"
-    />
+  <CheckBoxWs
+    onPress={() => {}}
+    width={80}
+    height={40}
+    textLabel="Label"
+    colorTextLabel="light"
+    textSizeLabel={17}
+    backgroundColorCheck="#056CF2"
+  />
 
-    <CreditCardWs
-      icon
-      back={false}
-      data={{
-        cvv: '098',
-        name: 'Weverson Luan De Sousa',
-        number: '4455787898754321',
-        validate: '08/2029'
-      }}
-    />
+  <CreditCardWs
+    icon
+    back={false}
+    data={{
+      cvv: '098',
+      name: 'Weverson Luan De Sousa',
+      number: '4455787898754321',
+      validate: '08/2029'
+    }}
+  />
 ```
 
 &nbsp;

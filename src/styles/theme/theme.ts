@@ -8,6 +8,7 @@ const themeStyleNative = {
   primary: '#1EA7fD',
   pimary_150: "#056CF2",
   secondary: '#6C757D',
+  gray_100: '#CDCDCD',
   sucess: '#28A745',
   danger: '#DC3545',
   warning: '#FFC107',

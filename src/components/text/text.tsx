@@ -10,8 +10,9 @@ import { ITextInterface } from "./interface";
 //styles
 import { styles } from "./styles";
 
-// hello
-
+/**
+ * Componente TextNativeWs para a interação da  ui.
+ */
 const TextNativeWs = ({
   text = "Hello Dev",
   color = "#1E1E1E",
