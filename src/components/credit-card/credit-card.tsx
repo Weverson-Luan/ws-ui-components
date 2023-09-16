@@ -85,25 +85,10 @@ const CreditCardWs = ({ data, back }: ICreditCardProps) => {
   return (
     <View style={styles.container}>
       <View style={styles.content}>
-        <View
-          style={{
-            width: "100%",
-            alignItems: "center",
-            justifyContent: "space-between",
-            flexDirection: "row",
-            paddingLeft: 16,
-            paddingRight: 16,
-          }}
-        >
+        <View style={styles.contentHeader}>
           {back ? <></> : <SvgIconChipCard />}
 
-          <View
-            style={{
-              width: 70,
-              height: 56,
-              alignItems: "center",
-            }}
-          >
+          <View style={styles.wrapperNumber}>
             {data.number.length === 0 ? (
               <Text />
             ) : (

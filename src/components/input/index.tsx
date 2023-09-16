@@ -94,7 +94,7 @@ const InputWs = ({
         {name === "password" && rightIconPasswordJsx && (
           <>
             {visiblityPassword ? (
-              <View style={styles(dataPropsStyles).wrapprerIcon}>
+              <View style={styles(dataPropsStyles).wrapprerRightIcon}>
                 <TouchableOpacity onPress={onPressVisiblityPassword}>
                   {rightIconPasswordJsx}
                 </TouchableOpacity>

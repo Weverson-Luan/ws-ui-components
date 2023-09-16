@@ -13,11 +13,30 @@ var _reactNative = require("react-native");
 
 const styles = props => _reactNative.StyleSheet.create({
   mainCheckbox: {
-    width: props.width ? props.width : 30,
-    height: props.height ? props.height : 30,
+    width: '100%',
+    paddingLeft: 16,
+    paddingRight: 16,
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    backgroundColor: 'transparent",'
+  },
+  wrapperBoxCheckIcon: {
+    width: props.widthBoxCheckIcon ? props.widthBoxCheckIcon : 30,
+    height: 40,
+    flexDirection: "column",
+    backgroundColor: props.backgroundBoxCheckIcon ? props.backgroundBoxCheckIcon : 'transparent',
+    alignItems: "flex-start",
+    justifyContent: "flex-start"
+  },
+  wrapperTextLabel: {
+    width: "100%",
+    height: props.heightWrapperTextLabel ? props.heightWrapperTextLabel : 40,
+    flexDirection: "column",
+    flexWrap: "wrap",
+    backgroundColor: "transparent",
+    alignItems: "flex-start",
+    justifyContent: "flex-start"
   }
 });
 /**

@@ -30,16 +30,13 @@ const styles = (props?: IInputNativeWs)=> StyleSheet.create({
   },
   wrapprerRightIcon: {
     width: 56,
-    height: props?.heightWrapperIcon ? props?.heightWrapperIcon:  50,
+    height: 50,
     backgroundColor: "transparent",
     alignItems: "center",
     justifyContent: "center",
     position: "absolute",
      right: props?.right && props.right,
-    borderRightWidth: 1,
-    borderTopLeftRadius: 4,
-    borderBottomLeftRadius: 4,
-    borderColor:  themeStyleNative.gray_100,
+   
   },
   wrapprerIconExpiressAndCode: {
     width: 56,

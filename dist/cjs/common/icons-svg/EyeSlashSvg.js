@@ -23,8 +23,8 @@ const SvgIconEyeSlash = ({
 //@ts-ignore
 , _extends({
   xmlns: "http://www.w3.org/2000/svg",
-  width: size ? size : 24,
-  height: size ? size : 21,
+  width: size ? size : 22,
+  height: size ? size : 22,
   fill: "none"
 }, res), /*#__PURE__*/React.createElement(_reactNativeSvg.Path, {
   fill: color ? color : "#C6C6C6",

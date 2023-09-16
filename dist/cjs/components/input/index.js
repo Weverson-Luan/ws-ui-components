@@ -31,9 +31,6 @@ const InputWs = ({
   lineHeight,
   letterSpacing,
   heightWrapperIcon,
-  icon,
-  topLeft,
-  top,
   rightIconJsx,
   rightIconPasswordJsx,
   leftIconJsx,
@@ -58,9 +55,6 @@ const InputWs = ({
     letterSpacing,
     heightWrapperIcon,
     rightIconPasswordJsx,
-    top,
-    topLeft,
-    icon,
     onPressVisiblityPassword,
     ...res
   };
