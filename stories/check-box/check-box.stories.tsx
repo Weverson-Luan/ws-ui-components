@@ -38,8 +38,6 @@ type Story = StoryObj<typeof CheckBoxWs>;
 export const CheckBoxDisable: Story = {
   name: "Check Box - Disable",
   args: {
-    width: 30,
-    height: 30,
     onPress: () => {},
     isChecked: false,
     backgroundColorCheck: themeStyleNative.pimary_150,
@@ -49,8 +47,7 @@ export const CheckBoxDisable: Story = {
 export const CheckBoxAble: Story = {
   name: "Check Box - Able",
   args: {
-    width: 30,
-    height: 30,
+    widthBoxCheckIcon: 40, // tamanho do box icon
     onPress: () => {},
     isChecked: true,
     backgroundColorCheck: themeStyleNative.primary,
@@ -60,11 +57,13 @@ export const CheckBoxAble: Story = {
 export const CheckBoxDisableWithLabel: Story = {
   name: "Check Box - Disable with label",
   args: {
-    width: 80,
-    height: 40,
-    textLabel: "Label",
+    widthBoxCheckIcon: 30, // tamanho do box icon
+    backgroundBoxCheckIcon: "transparent",
+    heightWrapperTextLabel: 40, // tamanho do box text label
+    textLabel:
+      "Eu concordo com a Política de privacidade da WSTech e dou consentimento para a coleta, o processamento e uso dos meus dados pessoais.",
     textSizeLabel: 17,
-    colorTextLabel: "light",
+    colorTextLabel: themeStyleNative.white,
     onPress: () => {},
     isChecked: false,
     backgroundColorCheck: themeStyleNative.pimary_150,
@@ -74,11 +73,9 @@ export const CheckBoxDisableWithLabel: Story = {
 export const CheckBoxAbleWithLabel: Story = {
   name: "Check Box - Able with label",
   args: {
-    width: 80,
-    height: 40,
     textLabel: "Label Checked",
     textSizeLabel: 17,
-    colorTextLabel: "light",
+    colorTextLabel: themeStyleNative.white,
     onPress: () => {},
     isChecked: true,
     backgroundColorCheck: themeStyleNative.pimary_150,

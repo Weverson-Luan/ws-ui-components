@@ -17,6 +17,19 @@ const styles = StyleSheet.create({
     backgroundColor: "#0044d0",
     borderRadius: 8,
   },
+  contentHeader: {
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "space-between",
+    flexDirection: "row",
+    paddingLeft: 16,
+    paddingRight: 16,
+  },
+  wrapperNumber: {
+    width: 70,
+    height: 56,
+    alignItems: "center",
+  },
   icon: {
     width: "100%",
     alignItems: "flex-end",

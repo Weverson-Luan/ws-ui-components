@@ -15,12 +15,22 @@ interface ITextInputProps {
 
 interface IInputNativeWs extends TextInputProps {
   /**
+   * A propriedade para saber qual tipo de campo estar sendo utilizado
+   */
+  name?: string;
+  
+  /**
+   * A propriedade para saber se a senha esta visivel ou não
+   */
+  visiblityPassword?: boolean;
+
+  /**
    * A propriedade CSS width determina a largura da área de conteúdo de um elemento. A área de conteúdo fica dentro do preenchimento, da borda, e da margem de um elemento.
    */
   width?: number;
 
   /**
-   * A heightpropriedade CSS especifica a altura de um elemento. Por padrão, a propriedade define a altura da área de conteúdo . Se box-sizingfor definido como border-box, entretanto, ele determinará a altura da área da borda .
+   * A height propriedade CSS especifica a altura de um elemento. Por padrão, a propriedade define a altura da área de conteúdo . Se box-sizingfor definido como border-box, entretanto, ele determinará a altura da área da borda .
    */
   height?: number;
 
@@ -36,7 +46,10 @@ interface IInputNativeWs extends TextInputProps {
    * Receber um elemento JSX para renderizar um icone
    */
   rightIconJsx?: React.ReactNode;
-  leftIconJsx?: string;
+  rightIconPasswordJsx?: React.ReactNode;
+  leftIconJsx?: React.ReactNode;
+  right?:number;
+  heightWrapperIcon?: number;
 
   /**
    * A propriedade margin do CSS define a área de margem nos quatro lados do elemento. É uma abreviação que define todas as margens individuais de uma só vez: margin-top, margin-right (en-US), margin-bottom, e margin-left (en-US).
@@ -153,7 +166,8 @@ interface IInputNativeWs extends TextInputProps {
   /**
    * Metodo que ira deixar a senhas visiveis ou não
    */
-  onPressVissiblePassword?: () => any;
+  onPressVisiblityPassword?: () => any;
+  
 }
 
 /**

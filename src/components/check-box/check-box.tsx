@@ -15,14 +15,17 @@ import { TextNativeWs } from "../text/text";
 import { ICheckBoxWsProps } from "./check";
 
 // styles
-import { themeStyleNative } from "../../styles/theme/theme";
 import { styles } from "./styles";
 
+/**
+ * Componente CheckBoxWs para a interação da  ui.
+ */
 const CheckBoxWs = ({
-  width,
-  height,
+  widthBoxCheckIcon,
+  heightWrapperTextLabel,
   isChecked,
   backgroundColorCheck,
+  backgroundBoxCheckIcon,
   textLabel,
   textSizeLabel,
   colorTextLabel,
@@ -30,8 +33,10 @@ const CheckBoxWs = ({
   ...res
 }: ICheckBoxWsProps) => {
   const dataStylesProps = {
-    width,
-    height,
+    widthBoxCheckIcon,
+    heightWrapperTextLabel,
+    backgroundBoxCheckIcon,
+    colorTextLabel,
   } as ICheckBoxWsProps;
   return (
     <TouchableOpacity
@@ -41,39 +46,39 @@ const CheckBoxWs = ({
     >
       {isChecked ? (
         <View style={styles(dataStylesProps).mainCheckbox}>
-          <SvgIconCheckBoxFill size={24} color={backgroundColorCheck} />
-          {textLabel && (
-            <TextNativeWs
-              text="Label"
-              color={
-                colorTextLabel === "dark"
-                  ? themeStyleNative.text
-                  : themeStyleNative.white
-              }
-              size={textLabel ? textSizeLabel : 16}
-              lineHeight={24}
-              letterSpacing={0.5}
-              marginBottom={8}
-            />
-          )}
+          <View style={styles(dataStylesProps).wrapperBoxCheckIcon}>
+            <SvgIconCheckBoxOutline size={24} color={backgroundColorCheck} />
+          </View>
+
+          <View style={styles(dataStylesProps).wrapperTextLabel}>
+            {textLabel && (
+              <TextNativeWs
+                text={textLabel ? textLabel : "Label"}
+                color={colorTextLabel ? colorTextLabel : "white"}
+                size={textLabel ? textSizeLabel : 16}
+                lineHeight={24}
+                letterSpacing={0.5}
+              />
+            )}
+          </View>
         </View>
       ) : (
         <View style={styles(dataStylesProps).mainCheckbox}>
-          <SvgIconCheckBoxOutline size={24} color={backgroundColorCheck} />
-          {textLabel && (
-            <TextNativeWs
-              text="Label"
-              color={
-                colorTextLabel === "dark"
-                  ? themeStyleNative.text
-                  : themeStyleNative.white
-              }
-              size={textLabel ? textSizeLabel : 16}
-              lineHeight={24}
-              letterSpacing={0.5}
-              marginBottom={8}
-            />
-          )}
+          <View style={styles(dataStylesProps).wrapperBoxCheckIcon}>
+            <SvgIconCheckBoxFill size={24} color={backgroundColorCheck} />
+          </View>
+
+          <View style={styles(dataStylesProps).wrapperTextLabel}>
+            {textLabel && (
+              <TextNativeWs
+                text={textLabel ? textLabel : "Label"}
+                color={colorTextLabel ? colorTextLabel : "white"}
+                size={textLabel ? textSizeLabel : 16}
+                lineHeight={24}
+                letterSpacing={0.5}
+              />
+            )}
+          </View>
         </View>
       )}
     </TouchableOpacity>

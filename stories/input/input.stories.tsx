@@ -3,8 +3,9 @@ import { View, StyleSheet } from "react-native";
 import { Meta, StoryObj } from "@storybook/react";
 
 // components
-import { InputWs } from "../../src/components/input/input";
+import { InputWs } from "../../src/components/input";
 import { SvgIconUser } from "../../src/common/icons-svg/UserSvg";
+import { SvgLockKey } from "../../src/common/icons-svg/LockKeySvg";
 import { SvgIconEye } from "../../src/common/icons-svg/EyeSvg";
 
 // styles
@@ -40,43 +41,63 @@ type Story = StoryObj<typeof InputWs>;
 export const Input: Story = {
   name: "Input Default",
   args: {
-    width: 300,
+    height: 50,
+    placeholder: "TextInput default...",
+    placeholderTextColor: themeStyleNative.secondary,
+    paddingLeft: 16,
+    borderColor: themeStyleNative.gray_100,
   },
 };
 
 export const InputWsCustom: Story = {
-  name: "Input Custom",
+  name: "Input Username Custom",
   args: {
-    width: 600,
-    borderWidth: 1,
-    borderColor: themeStyleNative.white,
-    paddingLeft: 16,
-    placeholder: "Informe nome de usuário",
-    placeholderTextColor: themeStyleNative.secondary,
+    name: "username",
+    height: 50,
+    textLabel: "Nome de usuário",
+    textAlign: "left",
     color: themeStyleNative.white,
+    colorTextLabel: themeStyleNative.white,
+    fontSize: 16,
+    fontWeight: "500",
+    right: 0,
+    borderWidth: 1,
+    borderColor: themeStyleNative.gray_100,
+    borderRadius: 4,
+    heightWrapperIcon: 50,
+    placeholder: "Digite seu usuário",
+    placeholderTextColor: themeStyleNative.secondary,
+    paddingLeft: 64,
     icon: true,
-    rightIconJsx: <SvgIconUser size={24} color={themeStyleNative.white} />,
+    leftIconJsx: <SvgIconUser size={24} color={themeStyleNative.white} />,
   },
 };
 
 export const InputPasswordWsCustom: Story = {
   name: "Input Password Custom",
   args: {
-    textLabel: "Informe Senha",
-    colorTextLabel: themeStyleNative.white,
+    name: "password",
+    height: 50,
+    textLabel: "Informe sua senha",
     textAlign: "left",
+    color: themeStyleNative.white,
+    colorTextLabel: themeStyleNative.white,
     fontSize: 16,
     fontWeight: "500",
-    width: 600,
+    right: 0,
     borderWidth: 1,
-    borderColor: themeStyleNative.white,
-    paddingLeft: 16,
+    borderColor: themeStyleNative.gray_100,
+    borderRadius: 4,
+    heightWrapperIcon: 50,
+    icon: true,
+    leftIconJsx: <SvgLockKey size={24} color={themeStyleNative.white} />,
+    rightIconPasswordJsx: (
+      <SvgIconEye size={24} color={themeStyleNative.white} />
+    ),
     placeholder: "*********",
     placeholderTextColor: themeStyleNative.secondary,
+    paddingLeft: 64,
     secureTextEntry: true,
-    color: themeStyleNative.white,
-    icon: true,
-    rightIconJsx: <SvgIconEye size={24} color={themeStyleNative.white} />,
-    onPressVissiblePassword: () => alert("Show password"),
+    visiblityPassword: true,
   },
 };

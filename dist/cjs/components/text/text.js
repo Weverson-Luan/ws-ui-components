@@ -16,8 +16,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 //styles
 
-// hello
-
+/**
+ * Componente TextNativeWs para a interação da  ui.
+ */
 const TextNativeWs = ({
   text = "Hello Dev",
   color = "#1E1E1E",

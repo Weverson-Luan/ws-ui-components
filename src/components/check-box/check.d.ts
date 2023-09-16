@@ -4,13 +4,17 @@
 import { TouchableOpacityProps } from "react-native";
 
 export interface ICheckBoxWsProps extends TouchableOpacityProps {
-  width?: number;
-  height?: number;
+  /**
+   * Proprieda do tamanho do box do icon-check-outline
+   */
+  widthBoxCheckIcon?: number;
+  heightWrapperTextLabel?:number;
   isChecked: boolean;
   backgroundColorCheck?: string;
+  backgroundBoxCheckIcon?: string
   textLabel?: string;
   textSizeLabel?: number;
-  colorTextLabel?: "dark" | "light";
+  colorTextLabel?: string
 }
 /**
  * EXPORTS

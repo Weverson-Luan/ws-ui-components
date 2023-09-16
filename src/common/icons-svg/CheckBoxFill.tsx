@@ -17,19 +17,9 @@ const SvgIconCheckBoxFill = ({ color, size, ...res }: ISvgProps) => (
     fill="none"
     {...res}
   >
-    <Rect
-      width={16}
-      height={16}
-      y={0.5}
-      fill={color ? color : "#056CF2"}
-      rx={4}
-    />
     <Path
-      stroke="#fff"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth={1.5}
-      d="m11.002 6.7-3.6 3.6-1.8-1.8"
+      fill={color ? color : "#F3F3F3 "}
+      d="M16.28 9.22a.748.748 0 0 1 0 1.06l-5.25 5.25a.747.747 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.749.749 0 0 1 1.06 0ZM21 4.5v15a1.5 1.5 0 0 1-1.5 1.5h-15A1.5 1.5 0 0 1 3 19.5v-15A1.5 1.5 0 0 1 4.5 3h15A1.5 1.5 0 0 1 21 4.5Zm-1.5 15v-15h-15v15h15Z"
     />
   </Svg>
 );
