@@ -77,7 +77,7 @@ const InputWs = ({
   }, leftIconJsx), rightIconJsx && /*#__PURE__*/_react.default.createElement(_reactNative.View, {
     style: (0, _styles.styles)(dataPropsStyles).wrapprerIconExpiressAndCode
   }, rightIconJsx), name === "password" && rightIconPasswordJsx && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, visiblityPassword ? /*#__PURE__*/_react.default.createElement(_reactNative.View, {
-    style: (0, _styles.styles)(dataPropsStyles).wrapprerIcon
+    style: (0, _styles.styles)(dataPropsStyles).wrapprerRightIcon
   }, /*#__PURE__*/_react.default.createElement(_reactNative.TouchableOpacity, {
     onPress: onPressVisiblityPassword
   }, rightIconPasswordJsx)) : /*#__PURE__*/_react.default.createElement(_reactNative.View, {

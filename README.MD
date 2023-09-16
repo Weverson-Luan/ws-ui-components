@@ -114,6 +114,18 @@ $ yarn install
       validate: '08/2029'
     }}
   />
+
+  <ButtonWs
+    onPress={()=> {}}
+    width="100%"
+    height={45}
+    backgroundColor="#17A2B8"
+    title={<TextNativeWs color="#FFFFF" fontWeight="500" letterSpacing={0.5} lineHeight={24} size={16} text="Text Native"/>}
+    borderColor="#17A2B8"
+    borderRadius={8}
+    borderWidth={1}
+    icon={<SvgIconUser color="#FFFFFF" size={24} style={{marginRight: 16}}/>}
+  />
 ```
 
 &nbsp;

@@ -15,6 +15,7 @@ const themeStyleNative = {
   pimary_150: "#056CF2",
   secondary: '#6C757D',
   gray_100: '#CDCDCD',
+  gray_150: '#C6C6C6',
   sucess: '#28A745',
   danger: '#DC3545',
   warning: '#FFC107',

@@ -94,20 +94,9 @@ const CreditCardWs = ({
   }, /*#__PURE__*/_react.default.createElement(_reactNative.View, {
     style: _styles.styles.content
   }, /*#__PURE__*/_react.default.createElement(_reactNative.View, {
-    style: {
-      width: "100%",
-      alignItems: "center",
-      justifyContent: "space-between",
-      flexDirection: "row",
-      paddingLeft: 16,
-      paddingRight: 16
-    }
+    style: _styles.styles.contentHeader
   }, back ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null) : /*#__PURE__*/_react.default.createElement(_IconChipCard.SvgIconChipCard, null), /*#__PURE__*/_react.default.createElement(_reactNative.View, {
-    style: {
-      width: 70,
-      height: 56,
-      alignItems: "center"
-    }
+    style: _styles.styles.wrapperNumber
   }, data.number.length === 0 ? /*#__PURE__*/_react.default.createElement(_reactNative.Text, null) : handleVerificationBinCardCredit((_numberValidation = numberValidation) === null || _numberValidation === void 0 || (_numberValidation = _numberValidation.card) === null || _numberValidation === void 0 ? void 0 : _numberValidation.type))), back ? /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_reactNative.View, {
     style: _styles.styles.strip
   }), /*#__PURE__*/_react.default.createElement(_reactNative.View, {

@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
 
 export default {
   component: TextNativeWs,
-  title: "TextWs",
+  title: "TextNativeWs",
   decorators: [
     (Story) => (
       <View style={styles.container}>

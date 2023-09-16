@@ -33,15 +33,12 @@ const styles = props => _reactNative.StyleSheet.create({
   },
   wrapprerRightIcon: {
     width: 56,
-    backgroundColor: "red",
+    height: 50,
+    backgroundColor: "transparent",
     alignItems: "center",
     justifyContent: "center",
     position: "absolute",
-    right: (props === null || props === void 0 ? void 0 : props.right) && props.right,
-    borderRightWidth: 1,
-    borderTopLeftRadius: 4,
-    borderBottomLeftRadius: 4,
-    borderColor: _theme.themeStyleNative.gray_100
+    right: (props === null || props === void 0 ? void 0 : props.right) && props.right
   },
   wrapprerIconExpiressAndCode: {
     width: 56,
